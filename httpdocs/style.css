@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+.opacity {
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+  /* Netscape */
+  -moz-opacity: 0.5;
+  /* Safari 1.x */
+  -khtml-opacity: 0.5;
+  /* Good browsers */
+  opacity: .5;
+}
+
+/* NAVIGATIEBAR */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-right: 5vw;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #81e841;
+  /* border: 10px 10px; */
+  /* background: lightblue; */
+  color: white;
+  min-height: 100px;
+  height: auto !important;
+  height: 50px;
+  margin-top: 0px;
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* EINDE NAVIGATIEBAR */
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 50px;
+  font-size: 100px;
+  position: absolute;
+  font-weight: bolder;
+}
+
+.achtergrond {}
+
+#logo {
+  top: 0;
+  margin: 15px;
+  width: 300px;
+  height: 300px;
+  /* background-color: transparent; */
+  position: fixed;
+}
+
+.groen {
+  color: rgb(116, 229, 45);
+}
+
+#geluidsgolf_1 {
+  background-image: url("INCLMEDIA/Geluidsgolven.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: -50vmax;
+  width: 90vmax;
+  height: 100vmax;
+  bottom: 1vmax;
+  position: relative;
+}
+
+#geluidsgolf_2 {
+  background-image: url("INCLMEDIA/Geluidsgolven.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -70vmax;
+  width: 85vmax;
+  position: relative;
+  margin-left: 35%;
+  height: 100vmax;
+}
+
+#stempop {
+  margin-top: 50px;
+  position: absolute;
+  width: 900px;
+  height: auto;
+  margin-bottom: 25px;
+  bottom: 0;
+  margin-left: 55vw;
+}
+
+@media screen and (max-width: 2100px) {
+ #stempop{
+   width: 750px;
+ }
+  }
+
+@media screen and (max-width: 1950px) {
+  #stempop{
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 1750px) {
+  #stempop{
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  #stempop {
+    width: 550px;
+    margin-bottom: 10px;
+  }
+}
+
+

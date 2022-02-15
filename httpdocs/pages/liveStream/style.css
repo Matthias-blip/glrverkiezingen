@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+/* NAVIGATIEBAR */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-right: 5vw;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #81e841;
+  /* border: 10px 10px; */
+  /* background: lightblue; */
+  color: white;
+  min-height: 100px;
+  height: auto !important;
+  height: 50px;
+  margin-top: 0px;
+}
+
+.topnav-place {
+  float: center;
+}
+
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto;
+}

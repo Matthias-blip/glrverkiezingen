@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GLR Stemt Uitslag</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    #chart-container {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+<body>
+  <div class="topnav">
+    <div class="topnav-right">
+      <a href="/">HOME</a>
+      <a href="/pages/jongerenPartij">JONGEREN <br>PARTIJ</a>
+      <a href="/pages/liveStream">LIVESTREAM</a>
+      <a href="/pages/stem">STEM</a>
+      <a class="active" href="/pages/uitslag">UITSLAG</a>
+    </div>
+  </div>
+  <div id="chart-container">
+    <canvas id="graphCanvas"></canvas>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      showGraph();
+    });
+
+
+    function showGraph() {
+      {
+        $.post("data.php",
+          function(data) {
+            console.log(data);
+            let partij = [];
+            let aantal_stemmen = [];
+
+            for (var i in data) {
+              partij.push(data[i].partij);
+              aantal_stemmen.push(data[i].aantal_stemmen);
+            }
+
+            var chartdata = {
+              labels: partij,
+              datasets: [{
+                label: 'Aantal stemmen  partij',
+                backgroundColor: '#88fc03',
+                borderColor: '#62fc03',
+                hoverBackgroundColor: '#CCCCCC',
+                hoverBorderColor: '#666666',
+                data: aantal_stemmen
+              }]
+            };
+
+            var graphTarget = $("#graphCanvas");
+
+            var barGraph = new Chart(graphTarget, {
+              type: 'bar',
+              data: chartdata
+            });
+          });
+      }
+    }
+  </script>
+
+</body>
+
+</html>
